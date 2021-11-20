@@ -124,3 +124,6 @@ dist
 ### Node Patch ###
 # Serverless Webpack directories
 .webpack/
+
+ormconfig.json
+docker-compose.yml
