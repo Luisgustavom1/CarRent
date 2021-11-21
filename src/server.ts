@@ -2,6 +2,9 @@ import express from "express";
 import swaggerUI from 'swagger-ui-express';
 
 import swaggerFile from "./swagger.json";
+
+import "reflect-metadata";
+import './modules/cars/shared/container'
 import './database';
 
 import router from './routes';
