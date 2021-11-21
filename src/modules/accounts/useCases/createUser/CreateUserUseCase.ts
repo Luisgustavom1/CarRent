@@ -10,8 +10,8 @@ class CreateUserUseCase {
         private usersRepository: IUsersRepository
     ) {}
 
-    async execute({ username, name, password, driver_license, email }: IUserRepositoryDTO) {
-        await this.usersRepository.create({ username, name, password, driver_license, email })
+    async execute({ name, password, driver_license, email }: IUserRepositoryDTO) {
+        await this.usersRepository.create({ name, password, driver_license, email })
     }
 }
 
