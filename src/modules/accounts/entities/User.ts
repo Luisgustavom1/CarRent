@@ -29,7 +29,7 @@ export class User {
 
     constructor() {
         if (!this.id) {
-            this.id = uuidv4;
+            this.id = uuidv4();
         };
     };
 }
