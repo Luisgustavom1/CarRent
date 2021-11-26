@@ -1,4 +1,4 @@
-import { NextFunction, Request, Response } from "express";
+import { NextFunction, request, Request, Response } from "express";
 import { verify } from "jsonwebtoken";
 import { AppErrors } from "../errors/AppErrors";
 import { UsersRepository } from "../modules/accounts/repositories/implementantions/UsersRepository";
@@ -25,6 +25,10 @@ export default function ensureAuthenticate(req: Request, res: Response, next: Ne
 
         if (!user) {
             throw new AppErrors("User does not exists!!", 401)
+        }
+
+        request.user = {
+            id: user_id
         }
 
         next()
